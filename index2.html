@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Tradicional - Uriel González</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="imagenes_diseño_tradicional.css">
+</head>
+
+<body>
+  <!-- 🔹 BOTÓN DE REGRESO A LA PÁGINA PRINCIPAL -->
+  <div class="volver-container">
+    <a href="Carpeta.html" class="boton-volver">Inicio</a>
+  </div>
+
+  <header>
+    <h1>Diseño Tradicional - Uriel González</h1>
+  </header>
+
+  <section class="galeria">
+    <img src="recursos/Cran.jpeg" alt="Diseño Tradicional 1">
+    <img src="recursos/Gojira.jpeg" alt="Diseño Tradicional 2">
+    <img src="recursos/mari.jpeg" alt="Diseño Tradicional 3">
+    <img src="recursos/Pisaje.jpeg" alt="Diseño Tradicional 4">
+    <img src="recursos/Pool.jpeg" alt="Diseño Tradicional 5">
+    <img src="recursos/Are.jpeg" alt="Diseño Tradicional 6">
+  </section>
+
+  <!-- Modal para ampliar imágenes -->
+  <div id="miModal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img id="imagenAmpliada" alt="Imagen ampliada">
+  </div>
+
+  <script>
+    // Obtener elementos del modal
+    const modal = document.getElementById("miModal");
+    const imagenAmpliada = document.getElementById("imagenAmpliada");
+    const cerrar = document.querySelector(".cerrar");
+    const imagenes = document.querySelectorAll(".galeria img");
+
+    let indiceActual = 0;
+
+    // Abrir imagen en el modal
+    imagenes.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        imagenAmpliada.src = img.src;
+        indiceActual = index;
+      });
+    });
+
+    // Cerrar modal al hacer clic en la X
+    cerrar.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    // Cerrar modal al hacer clic fuera de la imagen
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+
+    // 🔹 Navegación con las flechas del teclado
+    document.addEventListener("keydown", (e) => {
+      if (modal.style.display === "block") {
+        if (e.key === "ArrowRight") {
+          indiceActual = (indiceActual + 1) % imagenes.length;
+          imagenAmpliada.src = imagenes[indiceActual].src;
+        } else if (e.key === "ArrowLeft") {
+          indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+          imagenAmpliada.src = imagenes[indiceActual].src;
+        } else if (e.key === "Escape") {
+          modal.style.display = "none";
+        }
+      }
+    });
+
+    // 🔹 Cambiar imagen con clic sobre la imagen ampliada
+    imagenAmpliada.addEventListener("click", () => {
+      indiceActual = (indiceActual + 1) % imagenes.length;
+      imagenAmpliada.src = imagenes[indiceActual].src;
+    });
+  </script>
+</body>
+</html>

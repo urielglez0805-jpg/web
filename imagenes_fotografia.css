@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e0e;
+  color: white;
+  font-family: 'Playwrite AU TAS', sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+}
+
+h1 {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2.5em;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+/* --- Galería con espaciado mejorado --- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px 60px;
+  justify-items: center;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 3px solid #8a8a8a;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+/* --- Estilos del modal (imagen ampliada) --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  margin-top: 5%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cerrar:hover {
+  color: #ff4444;
+}
+
+/* --- BOTÓN DE VOLVER AL INICIO --- */
+.volver-container {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.boton-volver {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #b00;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: 'Playwrite AU TAS', sans-serif;
+}
+
+.boton-volver:hover {
+  background-color: #ff3333;
+  transform: scale(1.05);
+}

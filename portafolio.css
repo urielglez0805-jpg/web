@@ -1,0 +1,184 @@
+/* ====== ESTILO GENERAL ====== */
+body {
+  margin: 0;
+  font-family: 'Playwrite AU TAS', cursive;
+  background-color: #111;
+  color: #eee;
+}
+
+h1, h2, h3 {
+  font-family: "UnifrakturCook", cursive;
+  letter-spacing: 2px;
+  color: #f5f5f5;
+}
+
+/* ====== NAVEGACIÓN ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 10px 20px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.site-title {
+  margin-left: 10px;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+/* ====== MENÚ ====== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #eee;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #b00;
+}
+
+/* ====== MENÚ HAMBURGUESA ====== */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #eee;
+}
+
+/* ====== SECCIONES ====== */
+.section {
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+#quien-soy {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#quien-soy img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #b00;
+}
+
+.texto {
+  flex: 1;
+}
+
+/* ====== CARRERA ESCOLAR ====== */
+.carrera-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.carrera-item {
+  background-color: #424242;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.carrera-item:hover {
+  background-color: #310101;
+  transform: scale(1.03);
+}
+
+/* ====== SUBTRABAJOS ====== */
+.subtrabajos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.trabajo {
+  background-color: #424242;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.trabajo:hover {
+  background-color: #310101;
+  transform: scale(1.03);
+}
+
+/* ====== CONTACTO ====== */
+.insta-link {
+  color: #b00;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.insta-link:hover {
+  text-decoration: underline;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  #quien-soy {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #6b6868;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    padding: 15px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

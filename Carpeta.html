@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Uriel González</title>
+
+  <!-- Vinculamos el CSS -->
+  <link rel="stylesheet" href="portafolio.css">
+
+  <!-- Fuente gótica -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <!-- Fuente alternativa para texto -->
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <img src="recursos/logo.jpeg" alt="Logo de Uriel" class="logo">
+        <h1 class="site-title">Portafolio</h1>
+      </div>
+
+      <!-- Ícono de menú hamburguesa -->
+      <div class="menu-icon" id="menu-icon">&#9776;</div>
+
+      <!-- Enlaces del menú -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#quien-soy">¿Quién soy?</a></li>
+        <li><a href="#carrera">Carrera</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN QUIÉN SOY -->
+  <section id="quien-soy" class="section">
+    <img src="recursos/fotoperfil1.jpeg" alt="Foto de Uriel" class="perfil">
+    <div class="texto">
+      <h2>¿Quién soy?</h2>
+      <p>¡Hola! Soy <strong>Uriel González</strong>, diseñador gráfico, un poco introvertido y amante de la música (menos reggaeton).
+Encuentro en el arte visual una forma de expresar lo que las palabras simplemente no pueden decir. Me gusta imaginar y crear con emoción, estilo y una rebeldía la cual rompa los moldes.
+
+Cada diseño es una extensión de mi forma de ver el mundo: mezcla de energía, melancolía y libertad. Busco que mi trabajo comunique una historia, despierte una sensación y deje una huella en quien lo mira.
+
+Mi inspiración nace del sonido de la música, de la calma del silencio y de los momentos en los que la imaginación se convierte en refugio.
+Para mí, diseñar no solo es construir imágenes, sino darles alma.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CARRERA ESCOLAR -->
+  <section id="carrera" class="section">
+    <h2>Carrera escolar</h2>
+
+    <div class="carrera-container">
+      <div class="carrera-item">
+        <h3>Secundaria</h3>
+        <p> Secundaria Oficial #0814 "Adolfo Sanchez Vazquez".</p>
+      </div>
+
+      <div class="carrera-item">
+        <h3>Preparatoria</h3>
+        <p>CECyTEM Valle de Chalco Solidaridad I — Licenciatura en Animación Digital</p>
+      </div>
+
+      <div class="carrera-item">
+        <h3>Universidad</h3>
+        <p>Universidad Tres Culturas — Estudiante en la Licenciatura en Diseño Gráfico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN TRABAJOS -->
+  <section id="trabajos" class="section">
+    <h2>Trabajos</h2>
+
+    <div class="subtrabajos">
+      <div class="trabajo">
+        <h3>Diseño Tradicional</h3>
+        <p>Dibujos, bocetos y pinturas hechas a mano con técnicas mixtas y experimentales.</p>
+         <a href="index2.html">Diseño Tradicional</a>
+      </div>
+
+      
+      <div class="trabajo">
+        <h3>Diseño Digital</h3>
+        <p>Ilustraciones y composiciones creadas en Photoshop, Illustrator e IbisPaint.</p>
+          <a href="index3.html">Diseño Digital</a>
+      </div>
+  
+
+      <div class="trabajo">
+        <h3>Fotografía</h3>
+        <p>Retratos, paisajes y fotografía conceptual inspirada en la estética visual de la vida.</p>
+        <a href="index4.html">Fotografía</a>
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>¿Quieres colaborar o conocer más de mi trabajo?  
+    Puedes contactarme y seguirme en Instagram:</p>
+    <a href="https://www.instagram.com/leo_art_mx?igsh=MWwzbnc3MzhuNGF4ag==" target="_blank" class="insta-link">@leo_art_mx</a>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2025 Derechos reservados - Uriel González</p>
+  </footer>
+
+  <!-- SCRIPT DEL MENÚ -->
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
